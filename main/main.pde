@@ -1,6 +1,7 @@
 // ellipse(x, y, width, height);
 
 String textvar = "";
+//int gameloop = 1;
 
 void setup() {
   size(800, 600);

@@ -1,0 +1,11 @@
+﻿cos(angle) = xVelocity
+sin(angle) = yVelocity
+if you have an angle and a velocity, the resultant vector would be (xVel * cos(angle), yVel * sin(angle))
+
+
+<SteelRaven7> 
+First, you get the vector from the circle to the player, IE newVector = playerPosition - circlePosition. 
+Then you normalize said vector: newVector = normalize(newVector). 
+Now you got the direction vector from the circle towards the player. 
+You can now increment the current circle position with the direction vector: circlePosition += newVector
+You can even make it go faster or slower by using circlePosition += newVector * speed, where speed is a float.
