@@ -26,5 +26,3 @@ void keyPressed() {
     }
   }
 }
-
-int distanceX = enemyX + playerX;
