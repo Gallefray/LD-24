@@ -1,5 +1,7 @@
 // ellipse(x, y, width, height);
 
+String textvar = "";
+
 void setup() {
   size(800, 600);
   frameRate(24);
@@ -11,15 +13,16 @@ void draw() {
   playerellipse();
   enemyellipse();
   collision();
+  //displaytext();
 }
 
-void endgame() {
+void displaytext() {
   PFont myFont;
-  myFont = loadFont("Calibri-30.vlw"); //Calibri-48.vlw
-  textFont(myFont, 20);
+  myFont = loadFont("EurasiaBold-30.vlw");
+  textFont(myFont, 30);
   textAlign(CENTER);
   fill(255);
-  text("You Lose", width/2, height/1.30);
+  text(textvar, width/2, height/2);
 }
 
 

@@ -9,4 +9,5 @@ void enemyellipse() {
   ellipse(enemyX, enemyY, enemysize, enemysize);
 }
 
+//enemy chases player
 
