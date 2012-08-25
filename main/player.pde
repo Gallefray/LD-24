@@ -11,7 +11,6 @@ void playerellipse() {
 // movement
 void keyPressed() {
   if (key == CODED) { 
-
     if (keyCode == UP) {
       playerY-=4;
     } 
