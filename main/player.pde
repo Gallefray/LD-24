@@ -1,14 +1,14 @@
 // ellipse(x, y, width, height);
 int playerY = 300;
 int playerX = 400;
-int playersizeY = 50;
-int playersizeX = 50;
+int playersize = 50;
 
 void playerellipse() {
   fill(0, 0, 255);
-  ellipse(playerX, playerY, playersizeX, playersizeY);
+  ellipse(playerX, playerY, playersize, playersize);
 }
 
+// movement
 void keyPressed() {
   if (key == CODED) { 
 
@@ -26,3 +26,5 @@ void keyPressed() {
     }
   }
 }
+
+int distanceX = enemyX + playerX;

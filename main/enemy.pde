@@ -1,11 +1,12 @@
 // ellipse(x, y, width, height);
 
-int enemyY = 0;
-int enemyX = 0;
-int enemysizeY = 150;
-int enemysizeX = 150;
+int enemyY = 100;
+int enemyX = 100;
+int enemysize = 150;
 
 void enemyellipse() {
   fill(255, 0, 0);
-  ellipse(enemyX, enemyY, enemysizeX, enemysizeY);
+  ellipse(enemyX, enemyY, enemysize, enemysize);
 }
+
+
