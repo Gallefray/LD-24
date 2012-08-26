@@ -27,20 +27,20 @@ class orb {
        if (playersize > orbsize) {
          println("Collision: player > orb");
          while (orbsize > 0.0) {
-           playersize = playersize + orbsize;
-           orbsize = 0.0;
+           orbsize = orbsize - 5.0;
+           playersize = playersize + 5.0;
            if (orbsize == 0.0) {
              break;
            }
          }
        }
      }
-     else if (sqrt(sq(playerX-orbX)+sq(playerY-orbY)) < (playersize+orbsize)/2) {
+     if (sqrt(sq(playerX-orbX)+sq(playerY-orbY)) < (playersize+orbsize)/2) {
        if (playersize < orbsize) {
          println("Collision: player < orb");
          while (playersize > 0.0) {
-           orbsize = orbsize + playersize;
-           playersize = 0.0;
+           playersize = playersize - 5.0;
+           orbsize = orbsize + 5.0;
            if (playersize <= 0.0) {
              break;
            }
@@ -53,7 +53,7 @@ class orb {
        
    float OrbVectX, OrbVectY;
    float OrbNormX, OrbNormY;
-   float OrbSpeed = 3.0;
+   float OrbSpeed = 5.0;
 
    void movement() {
        float OrbChaseVectorX = playerX - orbX; 
@@ -65,17 +65,7 @@ class orb {
        OrbNormY = norm(OrbChaseVectorY, 0.0, 600.0);
        orbX = orbX - OrbNormX;
        orbY = orbY - OrbNormY;
-       println("has run"); 
-     
-   }
+       println("has run");
+     }
          
 }
-
-
-
-//void orbs() {
-//      // orbX, orbY,  size, size, R,  G,  B
-//  
-//
-//  
-//}

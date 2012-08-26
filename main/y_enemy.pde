@@ -1,8 +1,8 @@
-// ellipse(x, y, width, height);
+
 
 float enemyY = 100.0;
 float enemyX = 100.0;
-float enemysize = 150.0;
+float enemysize = 200.0;
 float enemyspeed = 5.0;
 
 void enemyellipse() {
@@ -14,7 +14,7 @@ float vectX, vectY;
 float normX, normY;
 
 void chase() {
-  //thanks to SteelRaven7 nd others, for the help, and the basic code construct ^_^
+  //thanks to SteelRaven7 and others, for the help, and the basic code construct ^_^
   float Xchasevector = playerX - enemyX; 
   float Ychasevector = playerY - enemyY; 
   Xchasevector = Xchasevector * enemyspeed;

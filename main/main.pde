@@ -1,35 +1,39 @@
-//String textvar = "";
+/** all code is the property of Polyhedron Design Studios and is licensed under the zlib license **/
+//thanks to SteelRaven7, Helzibah, adventureloop and others I have forgotten, for the help
 
+int winlose = 0;
 
 orb orb1;
+orb orb2;
+//orb orb3;
 
 void setup() {
   size(800, 600);
   frameRate(24);
-  smooth();
-  orb1 = new orb(600.0, 600.0, 49.0, 49.0, 0, 255, 0);
+  smooth();    // X      Y    Xsize  Ysize R   G   B 
+  orb1 = new orb(600.0, 400.0, 20.0, 20.0, 209, 144, 74);
+  orb2 = new orb(480.0, 500.0, 30.0, 40.0, 209, 244, 74);
+  //orb3 = new orb(
 }
 
 void draw() {
   background(0);
   playermove();
   playerellipse();
-  chase();
+  //chase();
   enemyellipse();
   collision();
-  orb1.disp();
-  orb1.collide();
-  //orb1.movement(); 
+  orbrun();
 }
 
-//void displaytext() {
-//  PFont myFont;
-//  myFont = loadFont("EurasiaBold-30.vlw");
-//  textFont(myFont, 30);
-//  textAlign(CENTER);
-//  fill(255);
-//  text(textvar, width/2, height/2);
-//}
+void orbrun() {
+  orb1.disp();
+  orb1.collide();
+  orb1.movement();
+  orb2.disp();
+  orb2.collide();
+  orb1.movement();   
+}
 
 
 
