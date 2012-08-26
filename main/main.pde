@@ -1,7 +1,6 @@
-// ellipse(x, y, width, height);
+//String textvar = "";
 
-String textvar = "";
-//int gameloop = 1;
+
 
 void setup() {
   size(800, 600);
@@ -16,7 +15,7 @@ void draw() {
   chase();
   enemyellipse();
   collision();
-  //displaytext();
+  orbs();
 }
 
 //void displaytext() {

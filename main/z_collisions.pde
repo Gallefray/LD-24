@@ -5,7 +5,7 @@ void collision() {
   if (sqrt(sq(playerX-enemyX)+sq(playerY-enemyY)) < (playersize+enemysize)/2) {
     if (playersize < enemysize) {
       println("Collision");
-      endgame();
+      //endgame();
       while (playersize > 0.0) {
         playersize = playersize - 5.0;
         enemysize = enemysize + 5.0;
@@ -18,8 +18,9 @@ void collision() {
   else {
     println("No Collision");
   }
+  
 }
 
-void endgame() {
-  textvar = "YOU LOSE";
-}
+//void endgame() {
+//  textvar = "YOU LOSE";
+//}
