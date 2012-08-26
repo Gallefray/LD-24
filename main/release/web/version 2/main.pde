@@ -1,13 +1,11 @@
 //String textvar = "";
 
 
-orb orb1;
 
 void setup() {
   size(800, 600);
   frameRate(24);
   smooth();
-  orb1 = new orb(600.0, 600.0, 49.0, 49.0, 0, 255, 0);
 }
 
 void draw() {
@@ -17,9 +15,7 @@ void draw() {
   chase();
   enemyellipse();
   collision();
-  orb1.disp();
-  orb1.collide();
-  //orb1.movement(); 
+  orbs();
 }
 
 //void displaytext() {

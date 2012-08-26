@@ -23,7 +23,7 @@ class orb {
    }
    
    void collide() {
-     if  (sqrt(sq(playerX-orbX)+sq(playerY-orbY)) < (playersize+orbsize)/2) {
+     if (sqrt(sq(orbX-playerX)+sq(orbY-playerY)) < (orbsize+playersize)/2) {
        if (playersize > orbsize) {
          println("Collision: player > orb");
          while (orbsize > 0.0) {
@@ -35,7 +35,7 @@ class orb {
          }
        }
      }
-     else if (sqrt(sq(playerX-orbX)+sq(playerY-orbY)) < (playersize+orbsize)/2) {
+     else if (sqrt(sq(orbX-playerX)+sq(orbY-playerY)) < (orbsize+playersize)/2) {
        if (playersize < orbsize) {
          println("Collision: player < orb");
          while (playersize > 0.0) {
@@ -73,9 +73,10 @@ class orb {
 
 
 
-//void orbs() {
-//      // orbX, orbY,  size, size, R,  G,  B
-//  
-//
-//  
-//}
+void orbs() {
+  orb orb1;    // orbX, orbY,  size, size, R,  G,  B
+  orb1 = new orb(600.0, 600.0, 49.0, 49.0, 0, 255, 0);
+  orb1.disp();
+  orb1.collide();
+  orb1.movement();
+}
