@@ -1,7 +1,7 @@
 // ellipse(x, y, width, height);
-int playerY = 300;
-int playerX = 400;
-int playersize = 50;
+float playerY = 300.0;
+float playerX = 400.0;
+float playersize = 50.0;
 
 void playerellipse() {
   fill(0, 0, 255);
@@ -12,16 +12,16 @@ void playerellipse() {
 void keyPressed() {
   if (key == CODED) { 
     if (keyCode == UP) {
-      playerY-=4;
+      playerY-=4.0;
     } 
     else if (keyCode == DOWN) {
-      playerY+=4;
+      playerY+=4.0;
     }
     else if (keyCode == LEFT) {
-      playerX-=4;
+      playerX-=4.0;
     }
     else if (keyCode == RIGHT) {
-      playerX+=4;
+      playerX+=4.0;
     }
   }
 }

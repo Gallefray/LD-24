@@ -6,10 +6,10 @@ void collision() {
     if (playersize < enemysize) {
       println("Collision");
       endgame();
-      while (playersize > 0) {
-        playersize = playersize - 10;
-        enemysize = enemysize + 10;
-        if (playersize <= 0) {
+      while (playersize > 0.0) {
+        playersize = playersize - 10.0;
+        enemysize = enemysize + 10.0;
+        if (playersize <= 0.0) {
           break;         
         }      
       }
