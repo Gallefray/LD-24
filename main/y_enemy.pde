@@ -17,18 +17,17 @@ void enemyellipse() {
 //  }
 //}
 
-Pvector vectX, vectY;
-Pvector playerPositionX = playerX;
-Pvector playerPositionY = playerY;
-Pvector enemyPositionX = enemyX; 
-Pvector enemyPositionY = enemyY;
-Pvector normX, normY;
-
-void chase() {
-    vectX = new Pvector(playerPositionX - enemyPositionX;
-    vectY = playerPositionY = enemyPositionY;
-    normX = normalize(vectX);
-    normY = normalize(vectY);
-    circlePositionX += normX;
-    circlePositionY += normY; 
-}
+//float vectX, vectY;
+//float Xchasevector = playerX - enemyX; //newVector = playerPositionX - circlePositionX. 
+//float Ychasevector = playerY - enemyY; //newVector = playerPositionY - circlePositionY. 
+//float normX, normY;
+//
+//void chase() {
+//    
+//    vectY = (Ychasevector);
+//    normX.norm(Xchasevector, 0, 800);
+//    //normY = normalize(vectY);
+//    enemyX = enemyX + normX;
+//    
+//    //circlePositionY += normY; 
+//}
