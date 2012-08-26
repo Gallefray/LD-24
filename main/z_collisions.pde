@@ -3,12 +3,12 @@ void collision() {
   // http://forum.processing.org/topic/trying-to-do-circle-on-circle-collision-detection-but-i-can-t-make-it-work-where-is-the-bug
   if (sqrt(sq(playerX-enemyX)+sq(playerY-enemyY)) < (playersize+enemysize)/2) {
     if (playersize < enemysize) {
-      println("Collision enemy eats player");
+      println("Player Loses");
       while (playersize > 0.0) {
         playersize = playersize - 5.0;
         enemysize = enemysize + 5.0;
         if (playersize <= 0.0) {
-          int winlose = 1;
+          endgame = 1;
           break;         
         }
        }      
@@ -21,7 +21,7 @@ void collision() {
         playersize = playersize + 5.0;
         enemysize = enemysize - 5.0;
         if (enemysize <= 0.0) {
-          int winlose = 2;
+          endgame = 2;
           break;
         }        
       }

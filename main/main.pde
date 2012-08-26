@@ -1,7 +1,7 @@
 /** all code is the property of Polyhedron Design Studios and is licensed under the zlib license **/
-//thanks to SteelRaven7, Helzibah, adventureloop, gabeochoa_ and others I have forgotten :( , for the help
+//thanks to SteelRaven7, Helzibah, adventureloop, gabeochoa_, vede, agersant, <fr_automatik and others I have forgotten :( , for the help with everything :)
 
-int winlose = 0;
+int endgame = 0;
 
 orb orb1;
 orb orb2;
@@ -14,10 +14,21 @@ orb orb8;
 orb orb9;
 orb orb10;
 
+PImage img;
+
 void setup() {
+  frame.setTitle("Blobolution");
+  
+  img = loadImage("data/background.jpg");
+  PFont myFont;
+  myFont = loadFont("EurasiaBold-30.vlw");
+  textFont(myFont, 30);
+  textAlign(CENTER);
+  
   size(800, 600);
   frameRate(24);
   smooth();    // X      Y    Xsize  Ysize R   G   B 
+  
   orb1 = new orb(600.0, 400.0, 20.0, 20.0, 209, 144, 74);
   orb2 = new orb(480.0, 500.0, 35.0, 35.0, 128, 15, 100);
   orb3 = new orb(500.0, 250.0, 30.0, 30.0, 290, 104, 407); 
@@ -32,13 +43,23 @@ void setup() {
 }
 
 void draw() {
-  background(0);
+  background(img);
   playermove();
   playerellipse();
   chase();
   enemyellipse();
   collision();
   orbrun();
+  
+  if (endgame == 1) {
+    fill(255);
+    text("YOU LOSE", width/2, height/2);
+  }
+  else if (endgame == 2) {
+    textAlign(CENTER);
+    fill(255);
+    text("YOU WIN", width/2, height/2);
+  }
 }
 
 void orbrun() {
@@ -83,6 +104,7 @@ void orbrun() {
   orb10.collide();
   orb10.movement();  
 }
+
 
 
 
