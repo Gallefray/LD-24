@@ -3,7 +3,7 @@
 float enemyY = 100.0;
 float enemyX = 100.0;
 float enemysize = 200.0;
-float enemyspeed = 5.0;
+float enemyspeed = 3.8;
 
 void enemyellipse() {
   fill(255, 0, 0);

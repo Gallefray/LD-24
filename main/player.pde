@@ -8,39 +8,40 @@ void playerellipse() {
 }
 
 // movement
+float playerspeed = 7.5;
 void playermove() {
   if (keyPressed) { 
     // up / North
     if (key == 'e') {
-      playerY-=5.0;
+      playerY-=playerspeed;
     } 
     // down / South
     else if (key == 'd') {
-      playerY+=5.0;
+      playerY+=playerspeed;
     }
     // left / West
     else if (key == 's') {
-      playerX-=5.0;
+      playerX-=playerspeed;
     }
     // right / East
     else if (key == 'f') {
-      playerX+=5.0;
+      playerX+=playerspeed;
     }
     // top left / North West
     else if (key == 'w') {
-      playerY-=5.0; playerX-=5.0;
+      playerY-=playerspeed; playerX-=playerspeed;
     }
     // bottom left / South West
     else if (key == 'z') {
-      playerY+=5.0; playerX-=5.0;
+      playerY+=playerspeed; playerX-=playerspeed;
     }
     //top right / North East
     else if (key == 'r') {
-      playerY-=5.0; playerX+=5.0;
+      playerY-=playerspeed; playerX+=playerspeed;
     }
     // bottom right / South East 
     else if (key == 'v') {
-      playerY+=5.0; playerX+=5.0;
+      playerY+=playerspeed; playerX+=playerspeed;
     }
   }
 }

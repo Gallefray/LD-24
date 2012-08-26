@@ -27,8 +27,8 @@ class orb {
        if (playersize > orbsize) {
          println("Collision: player > orb");
          while (orbsize > 0.0) {
-           orbsize = orbsize - 5.0;
-           playersize = playersize + 5.0;
+           playersize = playersize + orbsize;
+           orbsize = 0.0;
            if (orbsize == 0.0) {
              break;
            }
@@ -47,13 +47,13 @@ class orb {
          }
        }
      }
-     
+//     
 } 
      
        
    float OrbVectX, OrbVectY;
    float OrbNormX, OrbNormY;
-   float OrbSpeed = 5.0;
+   float OrbSpeed = 3.8;
 
    void movement() {
        float OrbChaseVectorX = playerX - orbX; 
