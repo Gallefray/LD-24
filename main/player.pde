@@ -1,6 +1,6 @@
 // ellipse(x, y, width, height);
-float playerY = 300.0;
 float playerX = 400.0;
+float playerY = 300.0;
 float playersize = 50.0;
 
 void playerellipse() {
