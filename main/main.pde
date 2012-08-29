@@ -1,5 +1,6 @@
+
 /** all code is the property of Polyhedron Design Studios and is licensed under the zlib license **/
-//thanks to SteelRaven7, Helzibah, adventureloop, gabeochoa_, vede, agersant, <fr_automatik and others I have forgotten :( , for the help with everything :)
+//thanks to SteelRaven7, Helzibah, adventureloop, gabeochoa_, vede, agersant, fr_automatik and others I have forgotten :( , for the help with everything :)
 
 int endgame = 0;
 
